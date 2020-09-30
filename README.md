@@ -5,7 +5,7 @@ In this lab you are asked to implement the *PRISM* algorithm to extract the clas
 Your algorithm should extract the rules ranked by the accuracy (from highest to lowest), and the ties are broken by choosing the rule with higher coverage. If both accuracy and coverage are the same - the condition is selected arbitrarily.
 
 Your algorithm should have two additional optinal parameters: 
-* the accuracy threshold - the number from 0 to 1 which specifies when you need to stop refining the rule. I.e. if you reached this accuracy threshold, you do not need to add more conditions to the rule's antedescent.
+* the accuracy threshold - the number from 0 to 1 which specifies which rules are considered valid. If after refining the rules and still within the coverage threshold you reach the best accuracy which is below the threshold, you do not add these rules to your solution.
 * the coverage threshold - the absolute number of records covered by the rule. If the more precise rule covers less records than this threshold, the algorithm should stop refining this rule.
 
 The output of the algorithm should be a decision list, where all the rules are presented ranked as above, including the rule itself, its accuracy, and its coverage.
